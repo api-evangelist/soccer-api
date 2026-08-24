@@ -1,0 +1,48 @@
+aid: soccer-api
+name: Soccer API
+description: >-
+  Soccer API sells live football data — live scores, statistics, odds and predictions — to
+  developers building sports applications. The site publishes coverage and pricing pages and a
+  blog, and gates access behind a sign-up.
+type: Index
+url: https://raw.githubusercontent.com/api-evangelist/soccer-api/refs/heads/main/apis.yml
+created: '2026-08-24'
+modified: '2026-08-24'
+specificationVersion: '0.23'
+tags:
+- Sports
+- Football
+- Live Scores
+- Odds
+- Data
+tags_raw:
+- soccer
+- live scores
+- odds
+- predictions
+apis: []
+common:
+- type: Website
+  url: https://soccer-api.com/
+- type: Plans
+  url: https://soccer-api.com/pricing
+- type: Blog
+  url: https://soccer-api.com/blog
+maintainers:
+- FN: Soccer API
+  email: soccerapi@outlook.com
+  url: https://soccer-api.com/
+x-provenance:
+  added: '2026-08-24'
+  method: searched
+  source: https://soccer-api.com/
+  note: >-
+    Submitted via apis.io/add on 2026-08-23 and PARKED by the gate at rating 12 rather than
+    published. Listed here on the standing rule that a valid company with a real product gets a
+    listing and the rating speaks for the rest.
+    NO MACHINE-READABLE SURFACE EXISTS, and apis[] is empty rather than modelled. The submitted
+    APIs.json at https://soccer-api.com/apis.json returns 404 against a control that also 404s, so
+    the 404 is real. So do /llms.txt, /docs, /api and /openapi.json — every one a genuine 404 with
+    a ~156KB error page, not a catch-all. The site itself is live and real, with coverage, pricing
+    and blog pages and a "Get API Access" sign-up, but nothing a machine can read is published.
+    That is what the score will reflect.
