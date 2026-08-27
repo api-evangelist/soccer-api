@@ -1,0 +1,41 @@
+generated: '2026-08-27'
+method: searched
+source: https://soccer-api.com/api-documentation/#rate-limits
+docs: https://soccer-api.com/api-documentation/
+http_status: 200
+limit_count: 0
+note: >-
+  ZERO PUBLISHED LIMITS. The documentation has a "Rate limits" section, but it publishes no number
+  and no confirmed header. Its own text says: "Final quotas and response headers depend on the
+  selected plan. Do not publish numeric limits until they are confirmed." — an instruction written
+  to the site owner, not guidance to a developer. The four header names it lists are presented under
+  the heading "Possible Rate-Limit Headers" with placeholder values (X-RateLimit-Limit: PLAN_LIMIT,
+  X-RateLimit-Remaining: REMAINING_REQUESTS, X-RateLimit-Reset: RESET_TIMESTAMP, Retry-After:
+  RETRY_SECONDS). They are therefore recorded below as UNCONFIRMED — the provider has not stated
+  that its API returns them, and no live response could be observed because no API host exists
+  (see x-coverage in apis.yml). Nothing here was inferred from convention.
+limits: []
+headers_documented: false
+headers_candidate:
+- name: X-RateLimit-Limit
+  value_published: PLAN_LIMIT
+  confirmed: false
+- name: X-RateLimit-Remaining
+  value_published: REMAINING_REQUESTS
+  confirmed: false
+- name: X-RateLimit-Reset
+  value_published: RESET_TIMESTAMP
+  confirmed: false
+- name: Retry-After
+  value_published: RETRY_SECONDS
+  confirmed: false
+exhaustion_status_code: 429
+exhaustion_source: >-
+  Listed in the documentation's error-status table as "429 — Rate limit exceeded — Wait and follow
+  retry guidance". The table is generic HTTP guidance on the same placeholder page; treat as
+  documented intent, not observed behaviour.
+observed_live: false
+observed_note: >-
+  No live probe was possible. The documented base URL is https://api.example.com/v1 (a placeholder),
+  and api.soccer-api.com does not resolve in DNS, so there is no host to observe a rate-limit
+  response from.

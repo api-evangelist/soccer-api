@@ -1,0 +1,33 @@
+generated: '2026-08-27'
+method: probed
+source: live GET probes of https://soccer-api.com/.well-known/* on 2026-08-27
+note: >-
+  Every canonical .well-known path returns HTTP 404 from the WordPress origin. The 404 is real,
+  not a catch-all: each response is the site's ~156KB themed error page, and the byte length
+  varies with the requested path length, which is what a genuine WordPress 404 does. NO
+  WellKnown or SecurityTxt pointer is emitted in apis.yml, because nothing here was served —
+  this file records a measured absence, not a presence.
+hosts:
+- host: soccer-api.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

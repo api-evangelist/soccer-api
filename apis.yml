@@ -1,36 +1,89 @@
 aid: soccer-api
 name: Soccer API
 description: >-
-  Soccer API sells live football data — live scores, statistics, odds and predictions — to
-  developers building sports applications. The site publishes coverage and pricing pages and a
-  blog, and gates access behind a sign-up.
+  Soccer API (soccer-api.com) is a Spain-contacted vendor marketing live football data — fixtures,
+  live scores, match events, standings, teams, players, line-ups, statistics, head-to-head, odds,
+  predictions, historical seasons and a real-time WebSocket feed — to developers building sports,
+  fantasy, media and betting applications. The site went live in August 2026 and publishes
+  documentation, coverage and pricing pages plus a small tutorial blog. Re-probed on 2026-08-27,
+  the product is announced but not shipped: every one of those three pages carries the vendor's own
+  notice declaring its contents placeholders pending a production specification, the documented
+  base URL is the literal example host https://api.example.com/v1, the coverage matrix names no
+  real competition, all paid prices read "$XX", and there is no sign-up, console, key issuance or
+  machine-readable contract of any kind. Access is requested by WhatsApp or email.
 type: Index
 url: https://raw.githubusercontent.com/api-evangelist/soccer-api/refs/heads/main/apis.yml
 created: '2026-08-24'
-modified: '2026-08-24'
+modified: '2026-08-27'
 specificationVersion: '0.23'
+image: https://soccer-api.com/wp-content/uploads/2026/08/cropped-ChatGPT-Image-Aug-6-2026-02_59_14-PM-192x192.png
 tags:
 - Sports
 - Football
 - Live Scores
 - Odds
-- Data
+- Predictions
+- Sports Data
+- Statistics
 tags_raw:
 - soccer
 - live scores
 - odds
 - predictions
-apis: []
+apis:
+- name: Soccer API
+  description: >-
+    The advertised live football data API — REST plus a WebSocket stream — covering competitions,
+    fixtures, live scores, match events, standings, teams, players, line-ups, statistics,
+    head-to-head, odds, predictions and historical data. NOT CALLABLE AS OF 2026-08-27, and
+    deliberately recorded without a baseURL. The reference at /api-documentation/ states in its own
+    words that "the base URL, authentication method, endpoint paths, field names, request quotas,
+    WebSocket protocol and response examples on this page are documentation placeholders until the
+    final production Soccer API specification is supplied", prints https://api.example.com/v1 as
+    the base and wss://stream.example.com/v1/soccer as the stream, and populates every example with
+    invented entities ("Example Premier League", match_74021, North City). Neither
+    api.soccer-api.com nor stream.soccer-api.com resolves in DNS. No OpenAPI, AsyncAPI, GraphQL
+    SDL, Postman collection, apis.json or llms.txt is published, and all seven probed
+    /.well-known/* paths return 404. The endpoint paths visible in the documentation were NOT
+    modelled into artifacts here, because the vendor states they are unconfirmed — an invented
+    contract would be worse than none.
+  humanURL: https://soccer-api.com/api-documentation/
+  tags:
+  - Sports
+  - Football
+  - Live Scores
+  - Odds
+  - Predictions
+  - WebSocket
+  properties:
+  - type: Documentation
+    url: https://soccer-api.com/api-documentation/
+  - type: Pricing
+    url: https://soccer-api.com/api-pricing/
 common:
 - type: Website
   url: https://soccer-api.com/
-- type: Plans
-  url: https://soccer-api.com/pricing
+- type: Documentation
+  url: https://soccer-api.com/api-documentation/
+- type: Pricing
+  url: https://soccer-api.com/api-pricing/
 - type: Blog
-  url: https://soccer-api.com/blog
+  url: https://soccer-api.com/api-news/
+- type: BlogRSS
+  url: https://soccer-api.com/feed/
+- type: Support
+  url: mailto:info@soccer-api.com
+- type: Plans
+  url: plans/soccer-api-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/soccer-api-rate-limits.yml
+- type: LLMsTxt
+  url: llms/soccer-api-llms.txt
+- type: DomainSecurity
+  url: security/soccer-api-domain-security.yml
 maintainers:
 - FN: Soccer API
-  email: soccerapi@outlook.com
+  email: info@soccer-api.com
   url: https://soccer-api.com/
 x-provenance:
   added: '2026-08-24'
@@ -38,11 +91,83 @@ x-provenance:
   source: https://soccer-api.com/
   note: >-
     Submitted via apis.io/add on 2026-08-23 and PARKED by the gate at rating 12 rather than
-    published. Listed here on the standing rule that a valid company with a real product gets a
-    listing and the rating speaks for the rest.
-    NO MACHINE-READABLE SURFACE EXISTS, and apis[] is empty rather than modelled. The submitted
-    APIs.json at https://soccer-api.com/apis.json returns 404 against a control that also 404s, so
-    the 404 is real. So do /llms.txt, /docs, /api and /openapi.json — every one a genuine 404 with
-    a ~156KB error page, not a catch-all. The site itself is live and real, with coverage, pricing
-    and blog pages and a "Get API Access" sign-up, but nothing a machine can read is published.
-    That is what the score will reflect.
+    published. Listed on the standing rule that a valid company with a real product gets a listing
+    and the rating speaks for the rest. Round two (2026-08-27) ran full STEP 0b contract discovery
+    against soccer-api.com and found the earlier read too generous: this is not a documented API
+    without a contract, it is an unfinished template site for an API that does not yet exist. See
+    x-scaffold. The address given on the apis.io submission was soccerapi@outlook.com; the
+    maintainer email below is info@soccer-api.com, the address the provider publishes on its own
+    site, which is the verifiable one.
+x-scaffold:
+  detected: '2026-08-27'
+  self_confessed: true
+  note: >-
+    THE PROVIDER'S OWN PAGES DECLARE THEMSELVES PLACEHOLDERS. This is recorded explicitly so no
+    later pass mistakes the site's completeness for a shipped product, and so nothing on it is ever
+    modelled into an artifact.
+  evidence:
+  - url: https://soccer-api.com/api-documentation/
+    status: 200
+    quote: >-
+      Implementation notice: The base URL, authentication method, endpoint paths, field names,
+      request quotas, WebSocket protocol and response examples on this page are documentation
+      placeholders until the final production Soccer API specification is supplied. Replace them
+      with confirmed values before publishing.
+  - url: https://soccer-api.com/api-pricing/
+    status: 200
+    quote: >-
+      Pricing notice: The prices, request quotas, competition limits, support levels and plan
+      inclusions on this page are implementation placeholders until the final commercial packages
+      are approved. Replace every placeholder before publishing.
+  - url: https://soccer-api.com/api-coverage/
+    status: 200
+    quote: >-
+      Coverage notice: The examples and coverage labels on this page are structural placeholders
+      until the final production competition list and endpoint matrix are supplied. Do not publish
+      unsupported league counts, season counts or endpoint availability.
+  corroborating:
+  - The documented base URL is https://api.example.com/v1 and the stream is
+    wss://stream.example.com/v1/soccer — both example.com placeholders.
+  - Neither api.soccer-api.com nor stream.soccer-api.com resolves in DNS.
+  - The coverage matrix rows read "Competition A" through "Competition D" with every cell set to
+    "Confirm"; no real league is named anywhere on the site.
+  - Starter, Growth and Pro are all priced "$XX / month"; every quota cell reads "Placeholder
+    quota" or "Placeholder limit".
+  - The rate-limit section instructs the site owner, not the developer - "Do not publish numeric
+    limits until they are confirmed."
+  - The site's own WordPress metadata at https://soccer-api.com/wp-json/ (HTTP 200) reads
+    '"name":"Soccer API","description":"Real-Time Cricket API"' - the build was templated from a
+    cricket-data site and the tagline was never changed.
+  - Every "Get API Access", "Choose <tier>" and "Contact Sales" control on the site resolves to
+    https://wa.me/34675372893 or mailto:info@soccer-api.com. There is no sign-up form, no console,
+    no account and no key issuance.
+  - The site's own navigation links https://soccer-api.com/soccer-predictions-api/, which returns
+    HTTP 404 and is absent from the sitemap.
+  - The favicon is wp-content/uploads/2026/08/cropped-ChatGPT-Image-Aug-6-2026-02_59_14-PM.png; the
+    sitemap's earliest lastmod is 2026-08-06, making the whole site about three weeks old at the
+    time of this probe.
+x-enrichment:
+  date: '2026-08-27'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Soccer API markets a football data API but does not yet operate one: its documentation, pricing
+    and coverage pages each carry a notice declaring their own contents placeholders "until the
+    final production Soccer API specification is supplied", the published base URL is the literal
+    https://api.example.com/v1, and api.soccer-api.com does not resolve.
+  evidence:
+  - url: https://soccer-api.com/api-documentation/
+    status: 200
+  - url: https://soccer-api.com/api-pricing/
+    status: 200
+  - url: https://soccer-api.com/openapi.json
+    status: 404
+  - url: https://soccer-api.com/.well-known/api-catalog
+    status: 404
+  - url: https://soccer-api.com/apis.json
+    status: 404
+  checked: '2026-08-27'

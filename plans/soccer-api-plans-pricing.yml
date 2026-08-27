@@ -1,0 +1,73 @@
+generated: '2026-08-27'
+method: searched
+source: https://soccer-api.com/api-pricing/
+docs: https://soccer-api.com/api-pricing/
+http_status: 200
+plan_count: 0
+currency: USD
+billing_period: monthly
+note: >-
+  ZERO PRICED PLANS. The pricing page is live (HTTP 200) and lays out five tier names, but it
+  publishes no price a buyer could act on: Starter, Growth and Pro all read literally "$XX / month",
+  every quota cell reads "Placeholder quota" or "Placeholder limit", and the page carries its own
+  notice — "Pricing notice: The prices, request quotas, competition limits, support levels and plan
+  inclusions on this page are implementation placeholders until the final commercial packages are
+  approved. Replace every placeholder before publishing." A second line above the comparison table
+  instructs the site owner to "Replace the placeholder values below with the final approved prices,
+  quotas and competition allowances." plan_count is therefore 0, not 5 — the tiers below are recorded
+  as advertised structure, not as purchasable plans, and no number was inferred to fill a gap.
+plans: []
+tiers_advertised:
+- name: Free
+  price_published: '$0'
+  price: 0
+  billing_period: monthly
+  quota_published: Limited monthly or daily requests
+  quota: null
+  audience: For testing and prototypes
+  cta: Start Testing
+  purchasable: false
+- name: Starter
+  price_published: '$XX'
+  price: null
+  billing_period: monthly
+  quota_published: Starter request quota
+  quota: null
+  audience: For individual developers
+  cta: Choose Starter
+  purchasable: false
+- name: Growth
+  price_published: '$XX'
+  price: null
+  billing_period: monthly
+  quota_published: Growth request quota
+  quota: null
+  audience: Most popular
+  cta: Choose Growth
+  purchasable: false
+- name: Pro
+  price_published: '$XX'
+  price: null
+  billing_period: monthly
+  quota_published: Pro request quota
+  quota: null
+  audience: For advanced products
+  cta: Choose Pro
+  purchasable: false
+- name: Enterprise
+  price_published: Custom pricing
+  price: null
+  billing_period: null
+  quota_published: Custom request and connection limits
+  quota: null
+  audience: Custom commercial solution
+  cta: Contact Sales
+  purchasable: false
+purchase_path:
+  self_serve_checkout: false
+  sign_up_form: false
+  detail: >-
+    No sign-up, checkout, console or account creation exists anywhere on the site. Every "Get API
+    Access", "Choose <tier>" and "Contact Sales" control resolves to the same two destinations: a
+    WhatsApp deep link (https://wa.me/34675372893) and mailto:info@soccer-api.com. Access is a
+    human conversation, not a developer flow.

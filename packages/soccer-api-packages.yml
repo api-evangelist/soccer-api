@@ -1,0 +1,27 @@
+generated: '2026-08-27'
+method: searched
+source: >-
+  registry.npmjs.org, pypi.org and the provider's own site (soccer-api.com homepage,
+  /api-documentation/, /api-pricing/), probed 2026-08-27
+package_count: 0
+official_count: 0
+note: >-
+  NO CLIENT LIBRARIES OF ANY KIND. The provider links no SDK, no GitHub organization and no source
+  repository from any page on its site — the only outbound link on the whole domain is a WhatsApp
+  deep link. registry.npmjs.org/soccer-api and pypi.org/pypi/soccer-api/json both return 404. An
+  npm keyword search for "soccer-api" returns only unrelated third-party packages (soccer-go,
+  d3-soccer, react-soccer-lineup and similar), none of which reference soccer-api.com. The
+  documentation offers raw fetch/requests/cURL snippets against a placeholder host instead of a
+  library. No Packages or SDKs pointer is emitted in apis.yml — this file records a checked
+  absence, not a distribution.
+packages: []
+registries_probed:
+- registry: npm
+  url: https://registry.npmjs.org/soccer-api
+  status: 404
+- registry: npm
+  url: https://registry.npmjs.org/soccer-api-client
+  status: 404
+- registry: pypi
+  url: https://pypi.org/pypi/soccer-api/json
+  status: 404
