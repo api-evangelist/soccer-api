@@ -13,6 +13,17 @@ description: >-
   machine-readable contract of any kind. Access is requested by WhatsApp or email.
 type: Index
 url: https://raw.githubusercontent.com/api-evangelist/soccer-api/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 created: '2026-08-24'
 modified: '2026-08-27'
 specificationVersion: '0.23'
