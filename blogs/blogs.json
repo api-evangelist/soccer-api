@@ -1,0 +1,21 @@
+{
+  "repo": "soccer-api",
+  "feeds": [
+    {
+      "source": "https://soccer-api.com/api-pricing/",
+      "feed_url": "https://soccer-api.com/api-pricing/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    },
+    {
+      "source": "https://soccer-api.com/api-news/",
+      "feed_url": "https://soccer-api.com/api-news/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-08-30T22:33:40Z"
+}
