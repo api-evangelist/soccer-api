@@ -29,10 +29,10 @@ modified: '2026-08-27'
 specificationVersion: '0.23'
 image: https://soccer-api.com/wp-content/uploads/2026/08/cropped-ChatGPT-Image-Aug-6-2026-02_59_14-PM-192x192.png
 tags:
-- soccer
-- live scores
+- Soccer
+- Live Scores
 - Odds
-- predictions
+- Predictions
 tags_raw:
 - soccer
 - live scores
