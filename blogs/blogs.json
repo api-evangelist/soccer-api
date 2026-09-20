@@ -14,8 +14,22 @@
       "title": "",
       "saved": 0,
       "method": "discovered"
+    },
+    {
+      "source": "https://soccer-api.com/api-pricing/blog/feed/",
+      "feed_url": "https://soccer-api.com/api-pricing/blog/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://soccer-api.com/api-news/blog/feed/",
+      "feed_url": "https://soccer-api.com/api-news/blog/feed/",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-09-13T13:00:00Z"
+  "fetched": "2026-09-19T20:17:39Z"
 }
